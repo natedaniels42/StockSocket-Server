@@ -7,14 +7,18 @@ require('dotenv').config();
 
 const PORT = process.env.PORT;
 const { data } = require('./stockData');
+const symbols = data.stocks.map(stock => stock.symbol); 
 
 io.on('connection', (socket) => {
     console.log('Connected');
 
-    socket.on('get stocks', () => {
-        console.log('test');
+    socket.on('historical', () => {
+        console.log('here');
+        console.log(data.stocks);
+        io.emit('historical', {'response-type': 'historical', 'data': data.stocks})
     })
-    io.emit('list', {'response-type': 'list', 'message': data.stocks});
+
+    io.emit('list', {'response-type': 'list', 'symbols': symbols});
 })
 
 httpServer.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
