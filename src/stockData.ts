@@ -1,8 +1,8 @@
 import { Stock } from './Stock';
 
-export class StockData {
-    constructor (public stocks: Stock[]) {
-        this.stocks = [
+class StockData {
+    constructor (public stocks = [
+        [
             new Stock('F', []),
             new Stock('T', []),
             new Stock('AAPL', []),
@@ -14,5 +14,10 @@ export class StockData {
             new Stock('NVDA', []),
             new Stock('PFE', [])
         ]
-    }
+    ]) {  }
 }
+
+const data = new StockData();
+module.exports = {
+    data
+} 

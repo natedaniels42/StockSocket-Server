@@ -6,6 +6,7 @@ const io = require('socket.io')(httpServer, {
 require('dotenv').config();
 
 const PORT = process.env.PORT;
+const { data } = require('./stockData');
 
 io.on('connection', (socket) => {
     console.log('Connected');
@@ -13,7 +14,7 @@ io.on('connection', (socket) => {
     socket.on('get stocks', () => {
         console.log('test');
     })
-    io.emit('list', {'response-type': 'list', 'message': 'message'});
+    io.emit('list', {'response-type': 'list', 'message': data.stocks});
 })
 
 httpServer.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
