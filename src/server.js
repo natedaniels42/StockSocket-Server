@@ -13,7 +13,7 @@ io.on('connection', (socket) => {
     socket.on('get stocks', () => {
         console.log('test');
     })
-    io.emit('list', 'Test coming from server');
+    io.emit('list', {'response-type': 'list', 'message': 'message'});
 })
 
 httpServer.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
