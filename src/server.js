@@ -13,7 +13,6 @@ io.on('connection', (socket) => {
     console.log('Connected');
 
     socket.on('historical', () => {
-        console.log('here');
         console.log(data.stocks);
         io.emit('historical', {'response-type': 'historical', 'data': data.stocks})
     })

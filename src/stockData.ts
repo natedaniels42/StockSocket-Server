@@ -1,4 +1,3 @@
-import { timeStamp } from 'console';
 import { Stock } from './Stock';
 
 class StockData {
@@ -19,6 +18,7 @@ class StockData {
 }
 
 const data = new StockData();
+
 module.exports = {
     data
 } 
