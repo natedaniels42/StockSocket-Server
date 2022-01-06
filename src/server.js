@@ -19,6 +19,7 @@ io.on('connection', (socket) => {
 
     socket.on('live', (sentData) => {
         const currentStock = data.stocks.find(stock => stock.symbol === sentData)
+        console.log(currentStock)
         io.emit('live', currentStock);
     })
 
