@@ -1,13 +1,20 @@
 const app = require('express')();
 const httpServer = require('http').createServer(app);
+const cors = require('cors');
 const io = require('socket.io')(httpServer, {
     cors: {origin: 'http://localhost:4200'}
 });
 require('dotenv').config();
 
 const PORT = process.env.PORT;
+
+app.use(cors({
+    origin: 'http://localhost:4200'
+}))
+
 const { data } = require('./stockData');
 const symbols = data.stocks.map(stock => stock.symbol); 
+
 
 io.on('connection', (socket) => {
     console.log('Connected');
