@@ -1,21 +1,28 @@
 const app = require('express')();
-const http = require('http').Server(app);
-const cors = require('cors');
-const io = require('socket.io')(http, {
+const httpServer = require('http').createServer(app);
+const io = require('socket.io')(httpServer, {
     cors: {origin: '*'}
 });
-
 require('dotenv').config();
 
 const PORT = process.env.PORT;
+const { data } = require('./stockData');
+const symbols = data.stocks.map(stock => stock.symbol); 
 
 io.on('connection', (socket) => {
-    console.log('Connected')
+    console.log('Connected');
 
-    socket.on('list', (data) => {
-        console.log('list')
-        io.emit('list', 'test')
+    socket.on('historical', (sentData) => {
+        console.log(sentData);
+        io.emit('historical', {'response-type': 'historical', 'data': sentData})
     })
+
+    socket.on('live', (sentData) => {
+        const currentStock = data.stocks.find(stock => stock.symbol === sentData)
+        io.emit('live', currentStock);
+    })
+
+    io.emit('list', {'response-type': 'list', 'symbols': symbols});
 })
 
-http.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
+httpServer.listen(PORT, () => console.log(`Server is listening on port: ${PORT}`));
