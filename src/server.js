@@ -12,9 +12,14 @@ const symbols = data.stocks.map(stock => stock.symbol);
 io.on('connection', (socket) => {
     console.log('Connected');
 
-    socket.on('historical', () => {
-        console.log(data.stocks);
-        io.emit('historical', {'response-type': 'historical', 'data': data.stocks})
+    socket.on('historical', (sentData) => {
+        console.log(sentData);
+        io.emit('historical', {'response-type': 'historical', 'data': sentData})
+    })
+
+    socket.on('live', (sentData) => {
+        const currentStock = data.stocks.find(stock => stock.symbol === sentData)
+        io.emit('live', currentStock);
     })
 
     io.emit('list', {'response-type': 'list', 'symbols': symbols});
