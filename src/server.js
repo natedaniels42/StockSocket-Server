@@ -1,7 +1,9 @@
 const app = require('express')();
 const httpServer = require('http').Server(app);
 const cors = require('cors');
-const io = require('socket.io')(httpServer);
+const io = require('socket.io')(httpServer, {
+    cors: {origin: 'http://localhost:4200'}
+});
 require('dotenv').config();
 
 const PORT = process.env.PORT;
