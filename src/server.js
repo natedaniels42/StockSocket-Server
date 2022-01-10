@@ -13,10 +13,10 @@ const symbols = data.stocks.map(stock => stock.symbol);
 let index = 1;
 
 // console.log(data.stocks[0].data[data.stocks[0].data.length - 1]);
-// setInterval(() => {
-//     data.updateData();
-//     console.log(data.stocks[0].data[data.stocks[0].data.length - 1]);
-// }, 5000);
+setInterval(() => {
+    data.updateData();
+    console.log(data.stocks[0].data[data.stocks[0].data.length - 1]);
+}, 2000);
 // let candlestick = new CandlestickStockData();
 // candlestick.populateData(5, [ new Stock('ATT',[
 //     {timestamp: 1, amount: 2},
@@ -49,8 +49,8 @@ io.on('connection', (socket) => {
     })
 
     socket.on('live', (sentData) => {
-        const currentStocks = [data.stocks[sentData[0]], data.stocks[sentData[1]], data.stocks[sentData[2]]];
-        io.emit('live', currentStocks);
+        const currentStocks = [data.stocks[sentData.data[0]], data.stocks[sentData.data[1]], data.stocks[sentData.data[2]]];
+        io.emit('live', {'response-type': 'live', 'data': currentStocks});
     })
 
     io.emit('list', {'response-type': 'list', 'symbols': symbols});
