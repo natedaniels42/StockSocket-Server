@@ -2,16 +2,16 @@ import { Stock } from './Stock';
 
 class StockData {
     constructor (public stocks = [
-        new Stock('F', []),
-        new Stock('T', []),
-        new Stock('AAPL', []),
-        new Stock('AMD', []),
-        new Stock('VALE', []),
-        new Stock('PLTR', []),
-        new Stock('INTC', []),
-        new Stock('BAC', []),
-        new Stock('NVDA', []),
-        new Stock('PFE', [])
+        new Stock('Ford', 'F', 'assets/images/ford-logo.png', []),
+        new Stock('AT&T', 'T', 'assets/images/att-logo.png', []),
+        new Stock('Apple', 'AAPL', 'assets/images/apple-logo-grey.png', []),
+        new Stock('Tyson Foods', 'TSN', 'assets/images/tyson-logo.png', []),
+        new Stock('Tesla', 'TSLA', 'assets/images/tesla-logo.png', []),
+        new Stock('Capital One', 'COF', 'assets/images/capital-one-logo.png', []),
+        new Stock('Intel', 'INTC', 'assets/images/intel-logo.png', []),
+        new Stock('Bank of America', 'BAC', 'assets/images/bank-of-america-logo.png', []),
+        new Stock('Microsoft', 'MSFT', 'assets/images/microsoft-logo.png', []),
+        new Stock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
     ]) {  }
 
     public populateData() {

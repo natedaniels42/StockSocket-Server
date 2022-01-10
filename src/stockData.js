@@ -4,16 +4,16 @@ var Stock_1 = require("./Stock");
 var StockData = /** @class */ (function () {
     function StockData(stocks) {
         if (stocks === void 0) { stocks = [
-            new Stock_1.Stock('F', []),
-            new Stock_1.Stock('T', []),
-            new Stock_1.Stock('AAPL', []),
-            new Stock_1.Stock('AMD', []),
-            new Stock_1.Stock('VALE', []),
-            new Stock_1.Stock('PLTR', []),
-            new Stock_1.Stock('INTC', []),
-            new Stock_1.Stock('BAC', []),
-            new Stock_1.Stock('NVDA', []),
-            new Stock_1.Stock('PFE', [])
+            new Stock_1.Stock('Ford', 'F', 'assets/images/ford-logo.png', []),
+            new Stock_1.Stock('AT&T', 'T', 'assets/images/att-logo.png', []),
+            new Stock_1.Stock('Apple', 'AAPL', 'assets/images/apple-logo-grey.png', []),
+            new Stock_1.Stock('Tyson Foods', 'TSN', 'assets/images/tyson-logo.png', []),
+            new Stock_1.Stock('Tesla', 'TSLA', 'assets/images/tesla-logo.png', []),
+            new Stock_1.Stock('Capital One', 'COF', 'assets/images/capital-one-logo.png', []),
+            new Stock_1.Stock('Intel', 'INTC', 'assets/images/intel-logo.png', []),
+            new Stock_1.Stock('Bank of America', 'BAC', 'assets/images/bank-of-america-logo.png', []),
+            new Stock_1.Stock('Microsoft', 'MSFT', 'assets/images/microsoft-logo.png', []),
+            new Stock_1.Stock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
         ]; }
         this.stocks = stocks;
     }

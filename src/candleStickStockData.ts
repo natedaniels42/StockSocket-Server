@@ -4,16 +4,16 @@ import { Stock } from './Stock';
 export class CandlestickStockData {
     constructor(
         public stocks = [
-            new CandleStickStock('F', []),
-            new CandleStickStock('T', []),
-            new CandleStickStock('AAPL', []),
-            new CandleStickStock('AMD', []),
-            new CandleStickStock('VALE', []),
-            new CandleStickStock('PLTR', []),
-            new CandleStickStock('INTC', []),
-            new CandleStickStock('BAC', []),
-            new CandleStickStock('NVDA', []),
-            new CandleStickStock('PFE', [])
+            new CandleStickStock('Ford', 'F', 'assets/images/ford-logo.png', []),
+            new CandleStickStock('AT&T', 'T', 'assets/images/att-logo.png', []),
+            new CandleStickStock('Apple', 'AAPL', 'assets/images/apple-logo-grey.png', []),
+            new CandleStickStock('Tyson Foods', 'TSN', 'assets/images/tyson-logo.png', []),
+            new CandleStickStock('Tesla', 'TSLA', 'assets/images/tesla-logo.png', []),
+            new CandleStickStock('Capital One', 'COF', 'assets/images/capital-one-logo.png', []),
+            new CandleStickStock('Intel', 'INTC', 'assets/images/intel-logo.png', []),
+            new CandleStickStock('Bank of America', 'BAC', 'assets/images/bank-of-america-logo.png', []),
+            new CandleStickStock('Microsoft', 'MSFT', 'assets/images/microsoft-logo.png', []),
+            new CandleStickStock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
         ]
     ) {  }
 

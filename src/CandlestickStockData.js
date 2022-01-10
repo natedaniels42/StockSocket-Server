@@ -5,16 +5,16 @@ var CandlestickStock_1 = require("./CandlestickStock");
 var CandlestickStockData = /** @class */ (function () {
     function CandlestickStockData(stocks) {
         if (stocks === void 0) { stocks = [
-            new CandlestickStock_1.CandleStickStock('F', []),
-            new CandlestickStock_1.CandleStickStock('T', []),
-            new CandlestickStock_1.CandleStickStock('AAPL', []),
-            new CandlestickStock_1.CandleStickStock('AMD', []),
-            new CandlestickStock_1.CandleStickStock('VALE', []),
-            new CandlestickStock_1.CandleStickStock('PLTR', []),
-            new CandlestickStock_1.CandleStickStock('INTC', []),
-            new CandlestickStock_1.CandleStickStock('BAC', []),
-            new CandlestickStock_1.CandleStickStock('NVDA', []),
-            new CandlestickStock_1.CandleStickStock('PFE', [])
+            new CandlestickStock_1.CandleStickStock('Ford', 'F', 'assets/images/ford-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('AT&T', 'T', 'assets/images/att-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Apple', 'AAPL', 'assets/images/apple-logo-grey.png', []),
+            new CandlestickStock_1.CandleStickStock('Tyson Foods', 'TSN', 'assets/images/tyson-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Tesla', 'TSLA', 'assets/images/tesla-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Capital One', 'COF', 'assets/images/capital-one-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Intel', 'INTC', 'assets/images/intel-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Bank of America', 'BAC', 'assets/images/bank-of-america-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Microsoft', 'MSFT', 'assets/images/microsoft-logo.png', []),
+            new CandlestickStock_1.CandleStickStock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
         ]; }
         this.stocks = stocks;
     }

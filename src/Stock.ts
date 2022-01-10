@@ -5,6 +5,8 @@ export interface Data {
 
 export class Stock {
     constructor(
-        public symbol: string, 
+        public name: string,
+        public symbol: string,
+        public image: string, 
         public data: Data[]) {  }
 }
