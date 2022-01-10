@@ -8,6 +8,7 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 const { data } = require('./stockData');
 const symbols = data.stocks.map(stock => stock.symbol); 
+// data.stocks.forEach(arr => console.log(arr.data));
 
 io.on('connection', (socket) => {
     console.log('Connected');
