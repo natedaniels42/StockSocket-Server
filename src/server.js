@@ -4,12 +4,14 @@ const io = require('socket.io')(httpServer, {
     cors: { origins: 'http://localhost:4200' }
 });
 require('dotenv').config();
-
 const PORT = process.env.PORT;
+
 const { data } = require('./stockData');
 const { CandlestickStockData } = require('./CandlestickStockData');
 const { Stock } = require('./Stock');
 const symbols = data.stocks.map(stock => stock.symbol); 
+let index = 1;
+
 // console.log(data.stocks[0].data[data.stocks[0].data.length - 1]);
 // setInterval(() => {
 //     data.updateData();
@@ -47,8 +49,8 @@ io.on('connection', (socket) => {
     })
 
     socket.on('live', (sentData) => {
-        const currentStock = data.stocks.find(stock => stock.symbol === sentData)
-        io.emit('live', currentStock);
+        const currentStocks = [data.stocks[sentData[0]], data.stocks[sentData[1]], data.stocks[sentData[2]]];
+        io.emit('live', currentStocks);
     })
 
     io.emit('list', {'response-type': 'list', 'symbols': symbols});
