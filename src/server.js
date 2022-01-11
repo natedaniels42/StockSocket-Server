@@ -9,7 +9,10 @@ const PORT = process.env.PORT;
 const { data } = require('./stockData');
 const { CandlestickStockData } = require('./CandlestickStockData');
 const { Stock } = require('./Stock');
-const symbols = data.stocks.map(stock => stock.symbol); 
+
+const symbols = data.stocks.map(stock => {
+    return {symbol: stock.symbol, image: stock.image}; 
+});
 let index = 1;
 
 setInterval(() => {
