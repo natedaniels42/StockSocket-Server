@@ -17,10 +17,20 @@ export class CandlestickStockData {
         ]
     ) {  }
 
-    populateData(interval: number, data: Stock[]) {
-        data.forEach((stock, i) => {
-            for (let j = 0; j < stock.data.length; j += interval) {
-                let currentSlice = stock.data.slice(j, j + interval);
+    populateData(sentData: any, data: Stock[]) {
+        const filteredStocks = data.filter(stock => sentData.symbols.includes(stock.symbol));
+        
+        filteredStocks.forEach((stock, i) => {
+                const currentStock = this.stocks.find(foundStock => foundStock.symbol === stock.symbol);
+            
+            for (let j = 0; j < stock.data.length; j += sentData.interval) {
+                if (stock.data[j].timestamp > sentData.end) {
+                    break;
+                }
+                while (stock.data[j].timestamp < sentData.start) {
+                    j++;
+                }
+                let currentSlice = stock.data.slice(j, j + sentData.interval);
                 let currentAmounts = currentSlice.map(item => item.amount);
                 let max = Math.max(...currentAmounts);
                 let min = Math.min(...currentAmounts);
@@ -33,8 +43,9 @@ export class CandlestickStockData {
                     open: open,
                     close: close
                 };
-                this.stocks[i].data.push(current);
+                currentStock.data.push(current);
             }
         })
+        console.log(this.stocks);
     }
 }

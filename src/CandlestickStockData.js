@@ -18,11 +18,19 @@ var CandlestickStockData = /** @class */ (function () {
         ]; }
         this.stocks = stocks;
     }
-    CandlestickStockData.prototype.populateData = function (interval, data) {
+    CandlestickStockData.prototype.populateData = function (sentData, data) {
         var _this = this;
-        data.forEach(function (stock, i) {
-            for (var j = 0; j < stock.data.length; j += interval) {
-                var currentSlice = stock.data.slice(j, j + interval);
+        var filteredStocks = data.filter(function (stock) { return sentData.symbols.includes(stock.symbol); });
+        filteredStocks.forEach(function (stock, i) {
+            var currentStock = _this.stocks.find(function (foundStock) { return foundStock.symbol === stock.symbol; });
+            for (var j = 0; j < stock.data.length; j += sentData.interval) {
+                if (stock.data[j].timestamp > sentData.end) {
+                    break;
+                }
+                while (stock.data[j].timestamp < sentData.start) {
+                    j++;
+                }
+                var currentSlice = stock.data.slice(j, j + sentData.interval);
                 var currentAmounts = currentSlice.map(function (item) { return item.amount; });
                 var max = Math.max.apply(Math, currentAmounts);
                 var min = Math.min.apply(Math, currentAmounts);
@@ -35,9 +43,10 @@ var CandlestickStockData = /** @class */ (function () {
                     open: open_1,
                     close: close_1
                 };
-                _this.stocks[i].data.push(current);
+                currentStock.data.push(current);
             }
         });
+        console.log(this.stocks);
     };
     return CandlestickStockData;
 }());
