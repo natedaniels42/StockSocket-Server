@@ -46,6 +46,5 @@ export class CandlestickStockData {
                 currentStock.data.push(current);
             }
         })
-        console.log(this.stocks);
     }
 }

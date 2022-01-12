@@ -46,7 +46,6 @@ var CandlestickStockData = /** @class */ (function () {
                 currentStock.data.push(current);
             }
         });
-        console.log(this.stocks);
     };
     return CandlestickStockData;
 }());

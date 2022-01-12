@@ -13,7 +13,6 @@ const { Stock } = require('./Stock');
 const symbols = data.stocks.map(stock => {
     return {symbol: stock.symbol, image: stock.image}; 
 });
-let index = 1;
 
 setInterval(() => {
     data.updateData();
@@ -30,7 +29,10 @@ io.on('connection', (socket) => {
     })
 
     socket.on('live', (sentData) => {
-        const currentStocks = [data.stocks[sentData.data[0]], data.stocks[sentData.data[1]], data.stocks[sentData.data[2]]];
+        const currentStocks = [Object.assign({}, data.stocks[sentData.data[0]]), Object.assign({}, data.stocks[sentData.data[1]]), Object.assign({}, data.stocks[sentData.data[2]])];
+        currentStocks.forEach(stock => {
+            stock.data = stock.data.slice(stock.data.length - 30, stock.data.length);
+        })
         io.emit('live', {'response-type': 'live', 'data': currentStocks});
     })
 
