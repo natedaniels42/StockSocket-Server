@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
     socket.on('historical', (sentData) => {
         const newData = new CandlestickStockData();
         newData.populateData(sentData.data, data.stocks);
-        io.emit('historical', {'response-type': 'historical', 'data': newData});
+        io.emit('historical', {'response-type': 'historical', 'data': newData, 'interval': sentData.data.interval});
     })
 
     socket.on('live', (sentData) => {
