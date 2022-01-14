@@ -14,7 +14,16 @@ class StockData {
         new Stock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
     ]) {  }
 
-    public populateData() {
+    /**
+     * Loops through the stocks array and creates stock data starting from a week ago
+     * running to the current time
+     * Data is generated for every minute
+     * Data consists of a timestamp and an amount
+     * The amount is updated anywhere from -$1.50 to 1.50
+     * Data is pushed into the that stock's data array
+     * @returns - void
+     */
+    public populateData(): void {
         this.stocks.forEach(stock => {
             let currentTime = Date.now()
             let startTime = currentTime - 604800000;
@@ -31,6 +40,13 @@ class StockData {
         })
     }
 
+    /**
+     * Loops through the stocks and for each one adds a new data point
+     * The timestamp is 1 minute after the previous and the new amount is updated
+     * anywhere from -$1.50 to $1.50 compared to the previous total
+     * The data point is then pushed into that stock's data array
+     * @returns - void
+     */
     public updateData() {
         this.stocks.forEach(stock => {
             let { timestamp, amount } = stock.data[stock.data.length - 1];

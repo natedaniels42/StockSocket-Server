@@ -17,6 +17,15 @@ var StockData = /** @class */ (function () {
         ]; }
         this.stocks = stocks;
     }
+    /**
+     * Loops through the stocks array and creates stock data starting from a week ago
+     * running to the current time
+     * Data is generated for every minute
+     * Data consists of a timestamp and an amount
+     * The amount is updated anywhere from -$1.50 to 1.50
+     * Data is pushed into the that stock's data array
+     * @returns - void
+     */
     StockData.prototype.populateData = function () {
         this.stocks.forEach(function (stock) {
             var currentTime = Date.now();
@@ -33,6 +42,13 @@ var StockData = /** @class */ (function () {
             }
         });
     };
+    /**
+     * Loops through the stocks and for each one adds a new data point
+     * The timestamp is 1 minute after the previous and the new amount is updated
+     * anywhere from -$1.50 to $1.50 compared to the previous total
+     * The data point is then pushed into that stock's data array
+     * @returns - void
+     */
     StockData.prototype.updateData = function () {
         this.stocks.forEach(function (stock) {
             var _a = stock.data[stock.data.length - 1], timestamp = _a.timestamp, amount = _a.amount;
