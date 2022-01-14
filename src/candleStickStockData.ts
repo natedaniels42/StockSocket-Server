@@ -1,4 +1,4 @@
-import { CandleStickStock, CandleStickData } from "./CandlestickStock";
+import { CandleStickStock, CandleStickData, HistoricalSearch } from "./CandlestickStock";
 import { Stock } from './Stock';
 
 export class CandlestickStockData {
@@ -17,7 +17,17 @@ export class CandlestickStockData {
         ]
     ) {  }
 
-    populateData(sentData: any, data: Stock[]) {
+    /**
+     * Filters the data array to give an array of only the stocks being asked for
+     * Loops through the filtered stocks and then creates the candlestick data by looping through 
+     * the data at the sent interval. 
+     * Once the candlestick data point is generated it is pushed into data for the 
+     * corresponding stock in the candlestickStockData
+     * @param sentData - HistoricalSearch
+     * @param data - Stock[]
+     * @returns - void
+     */
+    populateData(sentData: HistoricalSearch, data: Stock[]): void {
         const filteredStocks = data.filter(stock => sentData.symbols.includes(stock.symbol));
         
         filteredStocks.forEach((stock, i) => {

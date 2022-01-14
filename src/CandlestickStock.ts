@@ -14,3 +14,10 @@ export class CandleStickStock {
         public data: CandleStickData[]
     ) {  }
 }
+
+export interface HistoricalSearch {
+    symbols: string[],
+    start: number,
+    end: number,
+    interval: number
+}

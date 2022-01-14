@@ -18,6 +18,16 @@ var CandlestickStockData = /** @class */ (function () {
         ]; }
         this.stocks = stocks;
     }
+    /**
+     * Filters the data array to give an array of only the stocks being asked for
+     * Loops through the filtered stocks and then creates the candlestick data by looping through
+     * the data at the sent interval.
+     * Once the candlestick data point is generated it is pushed into data for the
+     * corresponding stock in the candlestickStockData
+     * @param sentData - HistoricalSearch
+     * @param data - Stock[]
+     * @returns - void
+     */
     CandlestickStockData.prototype.populateData = function (sentData, data) {
         var _this = this;
         var filteredStocks = data.filter(function (stock) { return sentData.symbols.includes(stock.symbol); });
