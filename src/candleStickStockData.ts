@@ -4,16 +4,16 @@ import { Stock } from './Stock';
 export class CandlestickStockData {
     constructor(
         public stocks = [
-            new CandleStickStock('Ford', 'F', 'assets/images/ford-logo.png', []),
-            new CandleStickStock('AT&T', 'T', 'assets/images/att-logo.png', []),
-            new CandleStickStock('Apple', 'AAPL', 'assets/images/apple-logo-grey.png', []),
-            new CandleStickStock('Tyson Foods', 'TSN', 'assets/images/tyson-logo.png', []),
-            new CandleStickStock('Tesla', 'TSLA', 'assets/images/tesla-logo.png', []),
-            new CandleStickStock('Capital One', 'COF', 'assets/images/capital-one-logo.png', []),
-            new CandleStickStock('Intel', 'INTC', 'assets/images/intel-logo.png', []),
-            new CandleStickStock('Bank of America', 'BAC', 'assets/images/bank-of-america-logo.png', []),
-            new CandleStickStock('Microsoft', 'MSFT', 'assets/images/microsoft-logo.png', []),
-            new CandleStickStock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
+            new CandleStickStock('Ford', 'F', '#4cd974', 'assets/images/ford-logo.png', []),
+            new CandleStickStock('AT&T', 'T', '#d95f4c', 'assets/images/att-logo.png', []),
+            new CandleStickStock('Apple', 'AAPL', '#4cbad9', 'assets/images/apple-logo-grey.png', []),
+            new CandleStickStock('Tyson Foods', 'TSN', '#d94cc4', 'assets/images/tyson-logo.png', []),
+            new CandleStickStock('Tesla', 'TSLA', '#d9cb4c', 'assets/images/tesla-logo.png', []),
+            new CandleStickStock('Capital One', '#4c5fd9', 'COF', 'assets/images/capital-one-logo.png', []),
+            new CandleStickStock('Intel', 'INTC', '#d9954c', 'assets/images/intel-logo.png', []),
+            new CandleStickStock('Bank of America', 'BAC', '#a54cd9', 'assets/images/bank-of-america-logo.png', []),
+            new CandleStickStock('Microsoft', 'MSFT', '#a5d94c', 'assets/images/microsoft-logo.png', []),
+            new CandleStickStock('Wells Fargo', 'WFC', '#4cd9b3', 'assets/images/wells-fargo-logo.png', [])
         ]
     ) {  }
 

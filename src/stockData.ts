@@ -2,16 +2,16 @@ import { Stock } from './Stock';
 
 class StockData {
     constructor (public stocks = [
-        new Stock('Ford', 'F', 'assets/images/ford-logo.png', []),
-        new Stock('AT&T', 'T', 'assets/images/att-logo.png', []),
-        new Stock('Apple', 'AAPL', 'assets/images/apple-logo-grey.png', []),
-        new Stock('Tyson Foods', 'TSN', 'assets/images/tyson-logo.png', []),
-        new Stock('Tesla', 'TSLA', 'assets/images/tesla-logo.png', []),
-        new Stock('Capital One', 'COF', 'assets/images/capital-one-logo.png', []),
-        new Stock('Intel', 'INTC', 'assets/images/intel-logo.png', []),
-        new Stock('Bank of America', 'BAC', 'assets/images/bank-of-america-logo.png', []),
-        new Stock('Microsoft', 'MSFT', 'assets/images/microsoft-logo.png', []),
-        new Stock('Wells Fargo', 'WFC', 'assets/images/wells-fargo-logo.png', [])
+        new Stock('Ford', 'F', '#4cd974', 'assets/images/ford-logo.png', []),
+        new Stock('AT&T', 'T', '#d95f4c', 'assets/images/att-logo.png', []),
+        new Stock('Apple', 'AAPL', '#4cbad9', 'assets/images/apple-logo-grey.png', []),
+        new Stock('Tyson Foods', 'TSN', '#d94cc4', 'assets/images/tyson-logo.png', []),
+        new Stock('Tesla', 'TSLA', '#d9cb4c', 'assets/images/tesla-logo.png', []),
+        new Stock('Capital One', '#4c5fd9', 'COF', 'assets/images/capital-one-logo.png', []),
+        new Stock('Intel', 'INTC', '#d9954c', 'assets/images/intel-logo.png', []),
+        new Stock('Bank of America', 'BAC', '#a54cd9', 'assets/images/bank-of-america-logo.png', []),
+        new Stock('Microsoft', 'MSFT', '#a5d94c', 'assets/images/microsoft-logo.png', []),
+        new Stock('Wells Fargo', 'WFC', '#4cd9b3', 'assets/images/wells-fargo-logo.png', [])
     ]) {  }
 
     /**

@@ -11,6 +11,7 @@ export class CandleStickStock {
         public name: string,
         public symbol: string,
         public image: string,
+        public color: string,
         public data: CandleStickData[]
     ) {  }
 }
