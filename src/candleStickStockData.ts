@@ -4,16 +4,16 @@ import { Stock } from './Stock';
 export class CandlestickStockData {
     constructor(
         public stocks = [
-            new CandleStickStock('Ford', 'F', '#4cd974', 'assets/images/ford-logo.png', []),
-            new CandleStickStock('AT&T', 'T', '#d95f4c', 'assets/images/att-logo.png', []),
-            new CandleStickStock('Apple', 'AAPL', '#4cbad9', 'assets/images/apple-logo-grey.png', []),
-            new CandleStickStock('Tyson Foods', 'TSN', '#d94cc4', 'assets/images/tyson-logo.png', []),
-            new CandleStickStock('Tesla', 'TSLA', '#d9cb4c', 'assets/images/tesla-logo.png', []),
-            new CandleStickStock('Capital One', 'COF', '#4c5fd9', 'assets/images/capital-one-logo.png', []),
-            new CandleStickStock('Intel', 'INTC', '#d9954c', 'assets/images/intel-logo.png', []),
-            new CandleStickStock('Bank of America', 'BAC', '#a54cd9', 'assets/images/bank-of-america-logo.png', []),
-            new CandleStickStock('Microsoft', 'MSFT', '#a5d94c', 'assets/images/microsoft-logo.png', []),
-            new CandleStickStock('Wells Fargo', 'WFC', '#4cd9b3', 'assets/images/wells-fargo-logo.png', [])
+            new CandleStickStock('Ford', 'F', '76, 217, 116', 'assets/images/ford-logo.png', []),
+            new CandleStickStock('AT&T', 'T', '217, 95, 76', 'assets/images/att-logo.png', []),
+            new CandleStickStock('Apple', 'AAPL', '76, 186, 217', 'assets/images/apple-logo-grey.png', []),
+            new CandleStickStock('Tyson Foods', 'TSN', '217, 76, 196', 'assets/images/tyson-logo.png', []),
+            new CandleStickStock('Tesla', 'TSLA', '217, 203, 76', 'assets/images/tesla-logo.png', []),
+            new CandleStickStock('Capital One', 'COF', '76, 95, 217', 'assets/images/capital-one-logo.png', []),
+            new CandleStickStock('Intel', 'INTC', '217, 149, 76', 'assets/images/intel-logo.png', []),
+            new CandleStickStock('Bank of America', 'BAC', '165, 76, 217', 'assets/images/bank-of-america-logo.png', []),
+            new CandleStickStock('Microsoft', 'MSFT', '165, 217, 76', 'assets/images/microsoft-logo.png', []),
+            new CandleStickStock('Wells Fargo', 'WFC', '76, 217, 179', 'assets/images/wells-fargo-logo.png', [])
         ]
     ) {  }
 
