@@ -9,7 +9,7 @@ export class CandlestickStockData {
             new CandleStickStock('Apple', 'AAPL', '#4cbad9', 'assets/images/apple-logo-grey.png', []),
             new CandleStickStock('Tyson Foods', 'TSN', '#d94cc4', 'assets/images/tyson-logo.png', []),
             new CandleStickStock('Tesla', 'TSLA', '#d9cb4c', 'assets/images/tesla-logo.png', []),
-            new CandleStickStock('Capital One', '#4c5fd9', 'COF', 'assets/images/capital-one-logo.png', []),
+            new CandleStickStock('Capital One', 'COF', '#4c5fd9', 'assets/images/capital-one-logo.png', []),
             new CandleStickStock('Intel', 'INTC', '#d9954c', 'assets/images/intel-logo.png', []),
             new CandleStickStock('Bank of America', 'BAC', '#a54cd9', 'assets/images/bank-of-america-logo.png', []),
             new CandleStickStock('Microsoft', 'MSFT', '#a5d94c', 'assets/images/microsoft-logo.png', []),

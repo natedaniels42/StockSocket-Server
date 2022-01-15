@@ -7,7 +7,7 @@ class StockData {
         new Stock('Apple', 'AAPL', '#4cbad9', 'assets/images/apple-logo-grey.png', []),
         new Stock('Tyson Foods', 'TSN', '#d94cc4', 'assets/images/tyson-logo.png', []),
         new Stock('Tesla', 'TSLA', '#d9cb4c', 'assets/images/tesla-logo.png', []),
-        new Stock('Capital One', '#4c5fd9', 'COF', 'assets/images/capital-one-logo.png', []),
+        new Stock('Capital One', 'COF', '#4c5fd9', 'assets/images/capital-one-logo.png', []),
         new Stock('Intel', 'INTC', '#d9954c', 'assets/images/intel-logo.png', []),
         new Stock('Bank of America', 'BAC', '#a54cd9', 'assets/images/bank-of-america-logo.png', []),
         new Stock('Microsoft', 'MSFT', '#a5d94c', 'assets/images/microsoft-logo.png', []),
