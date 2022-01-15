@@ -4,16 +4,16 @@ var Stock_1 = require("./Stock");
 var StockData = /** @class */ (function () {
     function StockData(stocks) {
         if (stocks === void 0) { stocks = [
-            new Stock_1.Stock('Ford', 'F', '#4cd974', 'assets/images/ford-logo.png', []),
-            new Stock_1.Stock('AT&T', 'T', '#d95f4c', 'assets/images/att-logo.png', []),
-            new Stock_1.Stock('Apple', 'AAPL', '#4cbad9', 'assets/images/apple-logo-grey.png', []),
-            new Stock_1.Stock('Tyson Foods', 'TSN', '#d94cc4', 'assets/images/tyson-logo.png', []),
-            new Stock_1.Stock('Tesla', 'TSLA', '#d9cb4c', 'assets/images/tesla-logo.png', []),
-            new Stock_1.Stock('Capital One', 'COF', '#4c5fd9', 'assets/images/capital-one-logo.png', []),
-            new Stock_1.Stock('Intel', 'INTC', '#d9954c', 'assets/images/intel-logo.png', []),
-            new Stock_1.Stock('Bank of America', 'BAC', '#a54cd9', 'assets/images/bank-of-america-logo.png', []),
-            new Stock_1.Stock('Microsoft', 'MSFT', '#a5d94c', 'assets/images/microsoft-logo.png', []),
-            new Stock_1.Stock('Wells Fargo', 'WFC', '#4cd9b3', 'assets/images/wells-fargo-logo.png', [])
+            new Stock_1.Stock('Ford', 'F', '76, 217, 116', 'assets/images/ford-logo.png', []),
+            new Stock_1.Stock('AT&T', 'T', '217, 95, 76', 'assets/images/att-logo.png', []),
+            new Stock_1.Stock('Apple', 'AAPL', '76, 186, 217', 'assets/images/apple-logo-grey.png', []),
+            new Stock_1.Stock('Tyson Foods', 'TSN', '217, 76, 196', 'assets/images/tyson-logo.png', []),
+            new Stock_1.Stock('Tesla', 'TSLA', '217, 203, 76', 'assets/images/tesla-logo.png', []),
+            new Stock_1.Stock('Capital One', 'COF', '76, 95, 217', 'assets/images/capital-one-logo.png', []),
+            new Stock_1.Stock('Intel', 'INTC', '217, 149, 76', 'assets/images/intel-logo.png', []),
+            new Stock_1.Stock('Bank of America', 'BAC', '165, 76, 217', 'assets/images/bank-of-america-logo.png', []),
+            new Stock_1.Stock('Microsoft', 'MSFT', '165, 217, 76', 'assets/images/microsoft-logo.png', []),
+            new Stock_1.Stock('Wells Fargo', 'WFC', '76, 217, 179', 'assets/images/wells-fargo-logo.png', [])
         ]; }
         this.stocks = stocks;
     }
